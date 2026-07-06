@@ -1,0 +1,8 @@
+{
+  "name": "greeting-lib",
+  "version": "1.0.0",
+  "description": "Tiny library used to verify R3-146 host-mediated git-repo library mounts.",
+  "main": "index.js",
+  "module": "index.js",
+  "peerDependencies": { "react": "*" }
+}
