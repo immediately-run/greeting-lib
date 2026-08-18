@@ -1,10 +1,26 @@
 {
-  "name": "greeting-lib",
+  "name": "m2-subapp",
   "version": "1.0.0",
-  "description": "Tiny library used to verify R3-146 host-mediated git-repo library mounts.",
-  "main": "index.tsx",
-  "module": "index.tsx",
-  "peerDependencies": {
-    "react": "*"
+  "description": "The callee half of the M2 attenuated-delegation live fixture (R3-43 drill 2). Lives on a branch of greeting-lib so no new repo is needed; greeting-lib@main keeps its R3-146 library-mount role untouched.",
+  "private": true,
+  "immediately.run": {
+    "requireLatest": "stale_ok",
+    "provides": [
+      {
+        "task": "probe",
+        "version": "1.0"
+      }
+    ],
+    "requests": {
+      "net:fetch": {
+        "hosts": ["https://example.com"],
+        "required": true
+      }
+    }
+  },
+  "dependencies": {
+    "@immediately-run/sdk": "^0.45.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   }
 }
