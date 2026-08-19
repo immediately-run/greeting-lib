@@ -21,7 +21,7 @@
     }
   },
   "dependencies": {
-    "@immediately-run/sdk": "0.45.2",
+    "@immediately-run/sdk": "0.45.3",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   }
